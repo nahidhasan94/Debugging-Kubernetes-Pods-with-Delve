@@ -12,10 +12,6 @@ RUN go build -o /app/dist/Debuging
 # == Base Image ==
 FROM debian:bullseye
 
-RUN apt-get -y update
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y vim ca-certificates iputils-ping curl
-
 WORKDIR /usr/app
 COPY --from=builder /go/bin/dlv /usr/bin/
 COPY --from=builder /app/dist/Debuging /usr/app/
