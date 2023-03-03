@@ -3,7 +3,7 @@ This repository provides a simple guide and a set of examples for debugging Go a
 
 - A docker file is attached in this repository
 - Build a docker image by ```DOCKER_BUILDKIT=1 docker build -t <image tag> .```
-- Follow [all.yaml](https://github.com/matiassingers/awesome-readme) to deploy
+- Follow [all.yaml](https://github.com/shabrul2451/Debugging-Kubernetes-Pods-with-Delve/blob/master/all.yaml) to deploy
 - After deploying on kubernetes ```exec``` the pod by
 ```kubectl exec -it <pod tag> /bin/bash```
 - After exec ```dlv --listen=:<debug port> --headless=true --api-version=2 --accept-multiclient attach 1```
